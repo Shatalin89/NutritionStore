@@ -52,3 +52,11 @@ body {
 footer {
     margin: 50px 0;
 }
+
+.hi {
+    font-weight: bold;
+    color: #9d9d9d;
+    block-size: 24px;
+  }
+
+

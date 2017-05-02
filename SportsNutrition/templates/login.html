@@ -1,0 +1,23 @@
+    <div class="navbar-form navbar-right">
+        {% if user.is_authenticated %}
+                <p class="hi"> Приветствую, {{ user.first_name }}&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn btn-primary" href="/logout/">Logout</a> </p>
+        {% else %}
+            <form id="signin"  role="form" method="post" action="/login/">
+                {% csrf_token %}
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input id="login" type="login" class="form-control" name="login" value="" placeholder="Login">
+                </div>
+
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    <input id="password" type="password" class="form-control" name="password" value="" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+                <a class="btn btn-primary" href="/reg/">Registration</a>
+            </form>
+            {% if errors %}
+                <p class="text-danger">Неверный логин</p>
+            {% endif %}
+        {% endif %}
+    </div>
