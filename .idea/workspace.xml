@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8ea6713-5105-4921-b59a-aa8fe012c36f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SportsNutrition/AdminNutrition/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SportsNutrition/AdminNutrition/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SportsNutrition/AdminNutrition/apps.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SportsNutrition/AdminNutrition/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SportsNutrition/AdminNutrition/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SportsNutrition/AdminNutrition/tests.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SportsNutrition/AdminNutrition/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SportsNutrition/NutritionStore/forms.py" afterPath="$PROJECT_DIR$/SportsNutrition/NutritionStore/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SportsNutrition/NutritionStore/models.py" afterPath="$PROJECT_DIR$/SportsNutrition/NutritionStore/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SportsNutrition/NutritionStore/views.py" afterPath="$PROJECT_DIR$/SportsNutrition/NutritionStore/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SportsNutrition/settings.py" afterPath="$PROJECT_DIR$/SportsNutrition/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SportsNutrition/templates/reg_form.html" afterPath="$PROJECT_DIR$/SportsNutrition/templates/reg_form.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -101,7 +102,7 @@
         <entry file="file://$PROJECT_DIR$/SportsNutrition/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="41" column="35" lean-forward="false" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+              <caret line="41" column="12" lean-forward="false" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -343,6 +344,14 @@
       <option name="presentableId" value="Default" />
       <updated>1493349641705</updated>
     </task>
+    <task id="LOCAL-00001" summary="add new app admin">
+      <created>1493803621562</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1493803621562</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -370,6 +379,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add new app admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="add new app admin" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -688,7 +701,7 @@
     <entry file="file://$PROJECT_DIR$/SportsNutrition/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="41" column="35" lean-forward="false" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+          <caret line="41" column="12" lean-forward="false" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
           <folding />
         </state>
       </provider>
