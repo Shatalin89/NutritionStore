@@ -18,7 +18,7 @@ class products(models.Model):
 
 class product_image(models.Model):
     image_product = models.ForeignKey(products)
-    image = models.ImageField(upload_to='/media/')
+    image = models.ImageField(upload_to='media/')
 
 class raiting(models.Model):
     raiting_product = models.ForeignKey(products)

@@ -2,14 +2,18 @@
 {% block content %}
     <h2>Регистрация</h2>
 <form class="form-horizontal" role="form" method="post" action="/reg/">
-                    {% csrf_token %}
-  <div class="form-group">
-    <label class="control-label col-xs-3" for="lastName">Фамилия:</label>
-    <div class="col-xs-9">
-      <input type="text" class="form-control" name="last_name" id="lastName" placeholder="Введите фамилию">
+    {% csrf_token %}
+  {% for field in form %}
+    <div class="form-group">
+    <label class="control-label col-xs-3">{{ field.label_tag }}</label>
+        <div class="col-xs-9">
+            {{ field }}
+            {% for error in field.errors %}
+                <a class="error" align="center"><font color="red">Ошибка:{{ error }}</font></a>
+            {% endfor %}
+        </div>
     </div>
-  </div>
-
+  {% endfor %}
   <div class="form-group">
     <div class="col-xs-offset-3 col-xs-9">
       <input type="submit" class="btn btn-primary" value="Регистрация">
@@ -17,5 +21,4 @@
     </div>
   </div>
 </form>
-
 {% endblock %}
