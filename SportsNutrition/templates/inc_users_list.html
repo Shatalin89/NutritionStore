@@ -1,0 +1,23 @@
+<table class="table-striped table">
+    <caption>Список пользователей</caption>
+    <tr>
+        <th>ФИ</th>
+        <th>Имя пользователя</th>
+        <th>Почта</th>
+        <th>Редактировать</th>
+        <th>Удалить</th>
+
+    </tr>
+    {% for user in users %}
+        {% load staticfiles %}
+        <tr>
+            <td><a href="../../clients/get/{{ client.id }}/">{{ user.first_name }}</a></td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.email }}</td>
+            <td><a href="#"><img width="20px" height="20px" src="{% static '/icon/edit.png' %}"></a></td>
+            <td><a href="#"><img width="20px" height="20px" src="{% static '/icon/del.png' %}"></a></td>
+        </tr>
+
+    {% endfor%}
+
+</table>
