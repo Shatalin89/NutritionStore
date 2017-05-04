@@ -80,7 +80,7 @@ function send_data() {
 
 function fill_form(id){
     $.ajax({
-        url: 'get_user_form/' + id,
+        url: 'admin/users/get/' + id,
         type: 'GET',
         dataType: 'json',
         success: function (response) {

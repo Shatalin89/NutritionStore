@@ -16,10 +16,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from SportsNutrition.NutritionStore.views import index, login, logout, reg
-from SportsNutrition.AdminNutrition.views import admin_page,admin_get_user
+from SportsNutrition.AdminNutrition.views import admin_page, admin_get_user, admin_del_user, admin_get_users
 urlpatterns = [
     url(r'^admin/$', admin_page),
     url(r'^admin/users/$', admin_get_user),
+    url(r'^admin/users/del/(?P<user_id>\d+)$', admin_del_user),
+    url(r'^admin/users/get/(?P<user_id>\d+)$', admin_get_users),
     url(r'^admin_django/$', admin.site.urls),
     url(r'^login/$', login),
     url(r'^logout/$', logout),

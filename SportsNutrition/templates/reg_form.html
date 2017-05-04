@@ -3,22 +3,12 @@
     <h2>Регистрация</h2>
 <form class="form-horizontal" role="form" method="post" action="/reg/">
     {% csrf_token %}
-  {% for field in form %}
+    {% include 'inc_reg_form.html' %}
     <div class="form-group">
-    <label class="control-label col-xs-3">{{ field.label_tag }}</label>
-        <div class="col-xs-9">
-            {{ field }}
-            {% for error in field.errors %}
-                <a class="error" align="center"><font color="red">Ошибка:{{ error }}</font></a>
-            {% endfor %}
+        <div class="col-xs-offset-3 col-xs-9">
+          <input type="submit" class="btn btn-primary" value="Регистрация">
+          <input type="reset" class="btn btn-default" value="Очистить форму">
         </div>
     </div>
-  {% endfor %}
-  <div class="form-group">
-    <div class="col-xs-offset-3 col-xs-9">
-      <input type="submit" class="btn btn-primary" value="Регистрация">
-      <input type="reset" class="btn btn-default" value="Очистить форму">
-    </div>
-  </div>
 </form>
 {% endblock %}
