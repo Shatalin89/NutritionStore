@@ -36,7 +36,7 @@ function update_page(new_html) {
 }
 
 function getFormData(form) {
-    var unindexed_array = form.serializeArray();
+        var unindexed_array = form.serializeArray();
     var indexed_array = {};
 
     $.map(unindexed_array, function (n, i) {
@@ -48,12 +48,13 @@ function getFormData(form) {
 
 function send_data() {
     var id = $('#user_id').html();
-    // console.log('user_id = ', id);
+    console.log('user_id = ', id);
     var prefix =  (id != undefined) ? id : '';
     var user_data = getFormData($form);
-    // console.log('user_data = ', user_data);
+    console.log('user_data = ', user_data);
+    console.log('prefix = ', prefix);
     $.ajax({
-        url: 'create/user/' + prefix,
+        url: '/admin/users/create/' + prefix,
         type: 'POST',
         data: user_data,
         dataType: 'json',
@@ -61,7 +62,7 @@ function send_data() {
             console.log("response = ", response);
             if (response.errors) {
                 var errors = JSON.parse(response.errors);
-                //console.log("errors = ", errors);
+                console.log("errors = ", errors);
                 clear_errors();
                 show_errors(errors);
             } else {
@@ -80,7 +81,7 @@ function send_data() {
 
 function fill_form(id){
     $.ajax({
-        url: 'admin/users/get/' + id,
+        url: '/admin/users/get/' + id,
         type: 'GET',
         dataType: 'json',
         success: function (response) {

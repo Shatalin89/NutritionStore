@@ -1,5 +1,6 @@
-  {% for field in form %}
-    <div class="form-group">
+<span class="hidden" id="user_id">{{ id }}</span>
+{% for field in form %}
+    <div class="form-group" >
     <label class="control-label col-xs-3">{{ field.label_tag }}</label>
         <div class="col-xs-9">
             {{ field }}
@@ -8,5 +9,4 @@
             {% endfor %}
         </div>
     </div>
-
   {% endfor %}

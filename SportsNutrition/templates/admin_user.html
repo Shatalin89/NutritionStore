@@ -1,14 +1,21 @@
 {% extends "admin_page.html" %}
 {% load staticfiles %}
 {% block js %}
-
     {{ block.super }}
-
-
+    <script src="{% static 'js/create_user.js' %}"></script>
+    <script src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
 {% endblock %}
 
 {% load staticfiles %}
 
 {% block content %}
-    {% include 'inc_users_list.html' %}
+    <div class="col-md-9">
+        <div class="row">
+            {% include 'inc_users_list.html' %}
+                <h4 align="center">Редактирование данных</h4>
+            {% include 'inc-admin_edit_users.html' %}
+            <input align="center" type="submit" class="btn btn-primary" value="Редактировать" onclick="send_data()">
+        </div>
+    </div>
 {% endblock %}

@@ -1,4 +1,5 @@
-<table class="table-striped table">
+
+<table id="users_list" class="table-striped table">
     <caption>Список пользователей</caption>
     <tr>
         <th>ФИ</th>
@@ -18,16 +19,5 @@
         <td><a href="/admin/users/del/{{ user.id }}"><img width="20px" height="20px" src="{% static '/icon/del.png' %}"></a></td>
     </tr>
     {% endfor%}
-
 </table>
-    <h4 align="center">Редактирование данных</h4>
-    <form class="form-horizontal" role="form" method="post" action="/edit/">
-        {% csrf_token %}
-        {% include 'inc_reg_form.html' %}
-        <div class="form-group">
-            <div class="col-xs-offset-3 col-xs-9">
-              <input type="submit" class="btn btn-primary" value="Регистрация">
-              <input type="reset" class="btn btn-default" value="Очистить форму">
-            </div>
-        </div>
-    </form>
+
